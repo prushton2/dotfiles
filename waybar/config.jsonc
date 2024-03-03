@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": [ "custom/arch", "hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
     "modules-center": ["clock"], // ["hyprland/window"],
-    "modules-right": [/*"bluetooth",*/"pulseaudio#input", "pulseaudio#output", "network", "custom/battery", "cpu", "memory", "temperature"/*, "backlight", "battery"*/],
+    "modules-right": [/*"bluetooth",*/"pulseaudio#input", "pulseaudio#output", "network", "battery", "custom/battery", "cpu", "memory", "temperature"/*, "backlight", "battery"*/],
     // Modules configuration/
     
     /*"bluetooth": {
@@ -112,7 +112,7 @@
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
+    },*/
     "battery": {
         "states": {
             // "good": 95,
@@ -126,7 +126,7 @@
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["  ", "  ", "  ", "  ", "  "]
-    },*/
+    },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{signalStrength}%  ",
