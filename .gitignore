@@ -1,0 +1,16 @@
+*
+
+!.gitignore
+
+!hypr
+!hypr/*
+hypr/client.conf
+
+!nvim
+!nvim/*
+
+!waybar
+!waybar/*
+
+!kitty
+!kitty/*
