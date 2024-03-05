@@ -33,9 +33,9 @@
             "1": " ",
 	    "2": "󰈹",
 	    "3": "󰙯",
-	    "99": "◕",
+	    "99": "",
 	    "98": "",
-	    "97": "",
+	    "97": " ",
             "urgent": " ",
             "focused": " ",
             "default": " "
@@ -84,11 +84,11 @@
     "cpu": {
         "format": "{usage}%  ",
         "tooltip": true,
-	"on-click": "hyprctl dispatch workspace 99 && kitty bashtop"
+	"on-click": "hyprctl dispatch workspace 97 && kitty bashtop"
     },
     "memory": {
         "format": "{}%  ",
-	"on-click": "hyprctl dispatch workspace 99 && kitty bashtop"
+	"on-click": "hyprctl dispatch workspace 97 && kitty bashtop"
     },
     "temperature": {
         // "thermal-zone": 2,
