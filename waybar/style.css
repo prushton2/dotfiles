@@ -1,0 +1,35 @@
+window#waybar {
+	border: 1px solid rgba(0,0,0,0);
+	background: rgba(10,10,10,0.5);
+}
+
+.modules-left {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.modules-center {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.modules-right {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#workspace button {
+	border-bottom: 3px solid rgba(10,10,10,0.5);
+}
+
+#workspaces button.visible {
+	border-bottom: 3px solid grey;
+}
+
+#workspaces button.active {
+	border-bottom: 3px solid aqua;
+}
+
+#custom-arch {
+	color: aqua;
+}

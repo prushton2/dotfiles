@@ -21,18 +21,8 @@
     },*/
     
     "custom/arch": {
-    	"format": "   󰣇",
+    	"format": "󰣇 ",
 	"on-click": "kitty --hold neofetch"
-    },
-    "custom/battery": {
-	"format": "{percentage}% {icon}",
-	"exec": "/home/prushton/.config/waybar/fake-battery 0",
-	"interval": 99999,
-	"on-scroll-up": "/home/prushton/.config/waybar/fake-battery 5",
-	"on-scroll-down": "/home/prushton/.config/waybar/fake-battery -5",
-	"return-type": "json",
-	"tooltip": false,
-        "format-icons": ["  ", "  ", "  ", "  ", "  "]
     },
     "hyprland/workspaces": {
         "disable-scroll": true,
