@@ -38,10 +38,13 @@
 	"format-window-separator": "  ",
 	"window-rewrite-default": "",
 	"window-rewrite": {
-		"title<.*discord.*>": "󰙯",
-		"title<.*youtube.*>": "󰗃",
 		"class<firefox>": "",
+		"class<firefox> title<.*discord.*>": "󰙯",
+		"class<firefox> title<.*youtube.*>": "󰗃",
+
 		"class<kitty>": "",
+		"class<kitty> title<.*nvim.*>": "",
+
 		"class<obsidian>": "󰍔",
 		"class<nm-connection-editor>": "",
 		"class<nwg-look>": ""
