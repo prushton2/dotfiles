@@ -39,6 +39,7 @@
 	"window-rewrite-default": "",
 	"window-rewrite": {
 		"title<.*discord.*>": "󰙯",
+		"title<.*youtube.*>": "󰗃",
 		"class<firefox>": "",
 		"class<kitty>": "",
 		"class<obsidian>": "󰍔",
