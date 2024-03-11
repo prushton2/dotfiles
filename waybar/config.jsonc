@@ -48,7 +48,7 @@
 		"class<alacritty>": "",
 		"class<alacritty> title<.*nvim.*>": "",
 
-		"class<obsidian>": "󰍔",
+		"class<obsidian>": "",
 		"class<nm-connection-editor>": "",
 		"class<nwg-look>": ""
 	}
