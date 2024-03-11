@@ -42,6 +42,9 @@
 		"class<firefox> title<.*discord.*>": "󰙯",
 		"class<firefox> title<.*youtube.*>": "󰗃",
 
+
+		"class<discord>": "󰙯",
+		
 		"class<alacritty>": "",
 		"class<alacritty> title<.*nvim.*>": "",
 
