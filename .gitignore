@@ -18,5 +18,5 @@ hypr/client.conf
 !alacritty
 !alacritty/*
 
-!dusnt
+!dunst
 !dunst/*
