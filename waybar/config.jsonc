@@ -7,30 +7,12 @@
     // Choose the order of the modules
     "modules-left": [ "custom/arch", "hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
     "modules-center": ["clock"], // ["hyprland/window"],
-    "modules-right": [/*"bluetooth",*/"pulseaudio#input", "pulseaudio#output", "network", "battery"],
+    "modules-right": [/*"bluetooth",*/"pulseaudio#input", "pulseaudio#output", "network", "backlight", "battery"],
     // Modules configuration/
     "custom/arch": {
     	"format": "󰣇 ",
 	"on-click": "kitty --hold neofetch"
     },
-    /*"hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "warp-on-scroll": false,
-
-        "format": "{name}: {icon}",
-        "format-icons": {
-            "1": " ",
-	    "2": "󰈹",
-	    "3": "󰙯",
-	    "99": "",
-	    "98": "",
-	    "97": " ",
-            "urgent": " ",
-            "focused": " ",
-            "default": " "
-        }
-    },*/
     "hyprland/workspaces": {
 	"format": "{icon}: {windows}",
 	"all-outputs": true,
@@ -64,6 +46,10 @@
         //"format-alt": "{:%Y-%m-%d - %H:%M:%S}",
 	"format": "{:%d %b %Y - %H:%M:%S}"
     },
+    "backlight": {
+	"format": "{percent}% {icon} ",
+	"format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
     "battery": {
         "states": {
             // "good": 95,
@@ -80,7 +66,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{signalStrength}%  ",
+        "format-wifi": "{signalStrength}%   ",
         "format-ethernet": "{ipaddr}/{cidr} 󰈀 ",
         "tooltip-format": "{essid} @ {signaldBm}dB\n{ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP) ",
