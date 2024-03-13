@@ -2,4 +2,4 @@
 
 killall dunst
 dunst &
-dunstify -a appname -u low summary
+dunstify -a appname -u low summary

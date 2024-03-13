@@ -168,7 +168,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "<span font_size='8pt'>%a</span>\n<span font_size='12pt'><b>%s</b></span>\n%p\n<span font_size='10pt'>%b</span>"
+    format = "<span face='notosans nerd font regular'> <span font_size='8pt'>%a</span>\n<span font_size='12pt'><b>%s</b></span>\n%p\n<span font_size='10pt'>%b</span> </span>"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
