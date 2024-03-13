@@ -16,10 +16,7 @@ hypr/client.conf
 !kitty/*
 
 !alacritty
-!alacritty/*
+!alacritty/**/**
 
 !dunst
 !dunst/*
-
-!alacritty
-!alacritty/*
