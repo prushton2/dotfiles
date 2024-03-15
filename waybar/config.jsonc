@@ -26,9 +26,11 @@
 
 
 		"class<discord>": "󰙯",
+
+		"class<libreoffice-writer>": "󰙏",
 		
 		"class<alacritty>": "",
-		"class<alacritty> title<.*nvim.*>": "",
+		"class<alacritty> title<.*neovim.*>": "",
 
 		"class<obsidian>": "",
 		"class<nm-connection-editor>": "",

@@ -24,3 +24,7 @@ style = "Regular"
 [colors.primary]
 foreground = "#FFFFFF"
 background = "#000000"
+
+[window]
+dynamic_title = true
+opacity=0.3
