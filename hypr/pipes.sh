@@ -1,5 +1,5 @@
 #!/bin/bash
-hyprctl dispatch fullscreen
+#hyprctl dispatch fullscreen
 declare -i  f=75 s=13 r=8000 t=0 c=1 n=0 l=0
 declare -ir w=$(tput cols) h=$(tput lines)
 declare -i  x=$((w/2)) y=$((h/2))
