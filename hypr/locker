@@ -1,0 +1,8 @@
+#!/bin/bash
+
+hyprctl dispatch workspace 99
+kitty /home/prushton/dotfiles/hypr/pipes.sh &
+sleep 1
+hyprlock
+hyprctl dispatch killactive
+hyprctl dispatch workspace 1
