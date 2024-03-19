@@ -14,7 +14,7 @@
 	"on-click": "kitty --hold neofetch"
     },
     "hyprland/workspaces": {
-	"format": "{icon}: {windows}",
+	"format": "{icon}: {windows} ",
 	"all-outputs": true,
 
 	"format-window-separator": "  ",
