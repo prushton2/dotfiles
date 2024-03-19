@@ -14,7 +14,10 @@ for i in range(monitors) {
     subprocess.check_output(["hyprctl", "dispatch", "fullscreen"])
 }
 
+subprocess.run(["dunstctl", "set-paused", "true"])
 subprocess.run(["hyprlock"])
+subprocess.run(["dunstctl", "set-paused", "false"])
+
 
 for i in range(monitors) {
     subprocess.check_output(["hyprctl", "dispatch", "focusmonitor", str(i)])
