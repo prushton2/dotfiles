@@ -1,7 +1,5 @@
 #!/bin/bash
-#hyprctl dispatch fullscreen
 declare -i  f=75 s=13 r=8000 t=0 c=1 n=0 l=0
-declare -ir w=$(tput cols) h=$(tput lines)
 declare -i  x=$((w/2)) y=$((h/2))
 declare -ar v=(    [00]="\x83" [01]="\x8f" [03]="\x93"
         [10]="\x9b" [11]="\x81" [12]="\x93"
@@ -24,9 +22,15 @@ while getopts "f:s:r:h" arg; do
     esac
 done
 
+hyprctl dispatch fullscreen
+
 tput smcup
 tput reset
 tput civis
+
+# declare w and h after fullscreen
+declare -ir w=$(tput cols) h=$(tput lines)
+
 while ! read -t0.0$((1000/$f)) -n1; do
     # New position:
     (($l%2))    && ((x+=($l==1)?1:-1))
