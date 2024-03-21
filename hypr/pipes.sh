@@ -21,14 +21,14 @@ while getopts "f:s:r:h" arg; do
         exit 0;;
     esac
 done
-
-hyprctl dispatch fullscreen
+#sleep 0.2
+#hyprctl dispatch fullscreen
 
 tput smcup
 tput reset
 tput civis
 
-# declare w and h after fullscreen
+# declare w and h after fu`llscreen
 declare -ir w=$(tput cols) h=$(tput lines)
 
 while ! read -t0.0$((1000/$f)) -n1; do
