@@ -3,10 +3,16 @@
 import subprocess
 import time
 
-
-
 def main() {
-    out = subprocess.check_output(["hyprctl", "monitors"]);
+    try {
+        subprocess.check_output(["pidof", "hyprlock"])
+        return
+    }
+    except { 
+        pass
+    }
+
+    out = subprocess.check_output(["hyprctl", "monitors"])
     monitors = len(str(out).split("Monitor"))-1
 
     for i in range(monitors) {
