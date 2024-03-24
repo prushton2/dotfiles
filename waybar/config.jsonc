@@ -28,6 +28,7 @@
 		"class<discord>": "󰙯",
 
 		"class<libreoffice-writer>": "󰙏",
+		"class<libreoffice-impress>": "󰐨",
 		
 		"class<alacritty>": "",
 		"class<alacritty> title<.*neovim.*>": "",
