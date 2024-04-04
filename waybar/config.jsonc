@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": [ "custom/arch", "hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
     "modules-center": ["clock"], // ["hyprland/window"],
-    "modules-right": ["idle_inhibitor","pulseaudio#input", "pulseaudio#output", "network", "backlight", "battery"],
+    "modules-right": ["pulseaudio#input", "pulseaudio#output", "network", "backlight", "battery", "idle_inhibitor"],
     // Modules configuration/
     "custom/arch": {
     	"format": "󰣇 ",
@@ -116,6 +116,12 @@
 
     "idle_inhibitor": {
 	"format": "{icon}",
-	"format-icons": ["󰍹 ", "󰷛 "]
+	"format-icons": {
+		"deactivated": "󰍹 ", 
+		"activated": "󰷛 "
+	},
+	"tooltip-format-activated": "Idle Inhibitor Active",
+	"tooltip-format-deactivated": "Idle Inhibitor Inactive",
+	"timeout": 60
     }
 }
