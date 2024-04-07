@@ -123,6 +123,6 @@
 	},
 	"tooltip-format-activated": "Idle Inhibitor Active",
 	"tooltip-format-deactivated": "Idle Inhibitor Inactive",
-	"timeout": 60
+	"timeout": 180
     }
 }
