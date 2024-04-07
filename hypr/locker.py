@@ -33,10 +33,9 @@ def main() {
 
     for i in range(monitors) {
         subprocess.check_output(["hyprctl", "dispatch", "focusmonitor", str(i)])
-        subprocess.check_output(["hyprctl", "dispatch", "killactive"])
-        time.sleep(0.2)
         subprocess.check_output(["hyprctl", "dispatch", "workspace", str(i+1)])
     }
+    subprocess.run(["killall", "kitty"])
 }
 
 if __name__ == "__main__" {
