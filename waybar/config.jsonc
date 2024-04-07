@@ -20,10 +20,9 @@
 	"format-window-separator": "  ",
 	"window-rewrite-default": "",
 	"window-rewrite": {
-		"class<firefox>": "",
+		"class<firefox>": "󰈹",
 		"class<firefox> title<.*discord.*>": "󰙯",
 		"class<firefox> title<.*youtube.*>": "󰗃",
-
 
 		"class<discord>": "󰙯",
 
@@ -35,7 +34,9 @@
 
 		"class<obsidian>": "",
 		"class<nm-connection-editor>": "",
-		"class<nwg-look>": ""
+		"class<nwg-look>": "",
+
+		"class<.*Minecraft.*>": "󰍳"
 	}
     },
     "hyprland/mode": {
