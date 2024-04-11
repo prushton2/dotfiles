@@ -18,7 +18,8 @@ def main() {
     for i in range(monitors) {
         subprocess.check_output(["hyprctl", "dispatch", "focusmonitor", str(i)])
         subprocess.check_output(["hyprctl", "dispatch", "workspace", str(99-i)])
-        subprocess.Popen(["kitty", "/home/prushton/dotfiles/hypr/pipes.sh"])
+        sp = subprocess.Popen(["kitty", "/home/prushton/dotfiles/hypr/pipes.sh"], stdout=subprocess.PIPE)
+        
         time.sleep(0.2)
     }
     

@@ -1,4 +1,7 @@
 #!/bin/bash
+
+echo t
+sleep 1
 declare -i  f=75 s=13 r=8000 t=0 c=1 n=0 l=0
 declare -i  x=$((w/2)) y=$((h/2))
 declare -ar v=(    [00]="\x83" [01]="\x8f" [03]="\x93"
@@ -23,7 +26,6 @@ while getopts "f:s:r:h" arg; do
 done
 #sleep 0.2
 #hyprctl dispatch fullscreen
-
 tput smcup
 tput reset
 tput civis
