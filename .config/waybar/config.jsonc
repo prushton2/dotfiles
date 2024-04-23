@@ -6,7 +6,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [ "custom/arch", "hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
-    "modules-center": ["clock"], // ["hyprland/window"],
+    "modules-center": ["custom/manualclock"], // ["hyprland/window"],
     "modules-right": ["pulseaudio#input", "pulseaudio#output", "network", "backlight", "battery", "idle_inhibitor"],
     // Modules configuration/
     "custom/arch": {
@@ -41,6 +41,11 @@
     },
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
+    },
+    "custom/manualclock": {
+	"exec": "timedatectl | grep Local | sed 's/               Local time: //' | sed 's/ EDT//'",
+	"interval": 1,
+	"format": "{}"
     },
     "clock": {
 	// TODO: This might be bad for battery life...
