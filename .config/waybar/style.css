@@ -1,3 +1,7 @@
+* {
+    font-family: 'Noto Sans Nerd Font Regular';
+}
+
 window#waybar {
 	border: 1px solid rgba(0,0,0,0);
 	background: rgba(10,10,10,0.5);
