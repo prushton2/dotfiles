@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sleep 1
 echo t
 sleep 1
 declare -i  f=75 s=13 r=8000 t=0 c=1 n=0 l=0
