@@ -27,3 +27,10 @@ background = "#000000"
 [window]
 dynamic_title = true
 opacity=0.5
+
+[keyboard]
+bindings = [
+   { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" },
+   { key = "l", mods = "Control", chars = "\ntput reset\n" }
+   #{ key = "p", mods = "Control", command = { program = "tput", args = ["reset"] } }
+]
