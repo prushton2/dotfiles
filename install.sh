@@ -16,3 +16,8 @@ ln -s ~/dotfiles/.config/neofetch  ~/.config/neofetch
 ln -s ~/dotfiles/.config/nvim      ~/.config/nvim
 ln -s ~/dotfiles/.config/kitty     ~/.config/kitty
 ln -s ~/dotfiles/.config/waybar    ~/.config/waybar
+
+
+rm ~/.bashrc
+
+ln -s ~/dotfiles/.bashrc    ~/.bashrc
