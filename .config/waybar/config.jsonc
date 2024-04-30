@@ -11,7 +11,7 @@
     // Modules configuration/
     "custom/arch": {
     	"format": "󰣇 ",
-	"on-click": "kitty --hold neofetch"
+	"on-click": "alacritty --hold -e neofetch"
     },
     "hyprland/workspaces": {
 	"format": "{icon}: {windows} ",
