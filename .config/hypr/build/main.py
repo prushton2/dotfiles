@@ -4,6 +4,7 @@ import subprocess
 import time 
 
 def main ():
+    processes =[]
     try :
         subprocess .check_output (["pidof","hyprlock"])
         return 
@@ -18,9 +19,11 @@ def main ():
     monitors =len (str (out ).split ("Monitor"))-1
     
     for i in range (monitors ):
+        print (i );
         subprocess .check_output (["hyprctl","dispatch","focusmonitor",str (i )])
         subprocess .check_output (["hyprctl","dispatch","workspace",str (99-i )])
-        sp =subprocess .Popen (["kitty","/home/prushton/dotfiles/hypr/pipes.sh"],stdout =subprocess .PIPE )
+        processes .append (subprocess .Popen (["alacritty","-e","/home/prushton/dotfiles/pipes.sh"]))
+        processes .append (subprocess .Popen (["alacritty","-e","/home/prushton/dotfiles/bigtime/src/bigtime","-fSq"]))
         
         time .sleep (0.2)
         
@@ -34,13 +37,16 @@ def main ():
     subprocess .run (["dunstctl","set-paused","false"])
     subprocess .Popen (["waybar"])
     
+    for i in processes :
+        i .kill ()
+        
+    
     
     for i in range (monitors ):
         subprocess .check_output (["hyprctl","dispatch","focusmonitor",str (i )])
         subprocess .check_output (["hyprctl","dispatch","workspace",str (i +1)])
         
     
-    subprocess .run (["killall","kitty"])
     
 
 

@@ -20,7 +20,9 @@ def main() {
         subprocess.check_output(["hyprctl", "dispatch", "focusmonitor", str(i)])
         subprocess.check_output(["hyprctl", "dispatch", "workspace", str(99-i)])
         processes.append(subprocess.Popen(["alacritty", "-e", "/home/prushton/dotfiles/pipes.sh"]))
-        processes.append(subprocess.Popen(["alacritty", "-e", "/home/prushton/dotfiles/bigtime/src/bigtime", "-fSq"]))
+        if(i == 0) {
+            processes.append(subprocess.Popen(["alacritty", "-e", "/home/prushton/dotfiles/bigtime/src/bigtime", "-fSq"]))
+        }
         
         time.sleep(0.2)
     }
