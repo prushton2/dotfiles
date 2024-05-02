@@ -1,23 +1,42 @@
 #!/bin/bash
 
-rm ~/.config/alacritty
-rm ~/.config/dunst
-rm ~/.config/hypr
-rm ~/.config/neofetch
-rm ~/.config/nvim
-rm ~/.config/kitty
-rm ~/.config/waybar
+declare -a __config_files
+__config_files=( 
+	".config/alacritty" 
+	".config/dunst" 
+	".config/hypr" 
+	".config/neofetch" 
+	".config/nvim" 
+	".config/kitty" 
+	".config/waybar" 
+	".bashrc" 
+	".gnupg"
+)
 
+declare -a __remove_queue
 
-ln -s ~/dotfiles/.config/alacritty ~/.config/alacritty
-ln -s ~/dotfiles/.config/dunst     ~/.config/dunst
-ln -s ~/dotfiles/.config/hypr      ~/.config/hypr
-ln -s ~/dotfiles/.config/neofetch  ~/.config/neofetch
-ln -s ~/dotfiles/.config/nvim      ~/.config/nvim
-ln -s ~/dotfiles/.config/kitty     ~/.config/kitty
-ln -s ~/dotfiles/.config/waybar    ~/.config/waybar
+echo -e "\033[31;1;1mThe following directories will be removed\033[0m"
 
+for dir in "${!__config_files[@]}" 
+do
+	__remove_queue[dir]="${HOME}/${__config_files[dir]}"
+	echo "${__remove_queue[dir]}"
+done
 
-rm ~/.bashrc
+echo ""
+echo -n "Confirm the deletion of the directories [Y/n] "
+read confirm
 
-ln -s ~/dotfiles/.bashrc    ~/.bashrc
+if [ $confirm = "y" ]; then
+	
+	for dir in "${!__config_files[@]}" 
+	do
+		rm -rf "${__remove_queue[dir]}"
+		ln -s "${HOME}/dotfiles/${__config_files[dir]}" "${HOME}/${__config_files[dir]}"
+	done
+	echo "dotfiles installed"
+
+else
+	echo "denied"
+fi
+

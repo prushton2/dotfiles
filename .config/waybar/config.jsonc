@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": [ "custom/arch", "hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
     "modules-center": ["custom/manualclock"], // ["hyprland/window"],
-    "modules-right": ["pulseaudio#input", "pulseaudio#output", "network", "backlight", "battery", "idle_inhibitor"],
+    "modules-right": ["pulseaudio#input", "pulseaudio#output", "network", "backlight", "temperature", "battery", "idle_inhibitor"],
     // Modules configuration/
     "custom/arch": {
     	"format": "󰣇 ",
@@ -60,6 +60,13 @@
     "backlight": {
 	"format": "{percent}% {icon} ",
 	"format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "temperature": {
+        "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+       // "critical-threshold": 80,
+       // "format-critical": "{temperatureC}°C ",
+       "format": "{temperatureC}°C  "
     },
     "battery": {
         "states": {
