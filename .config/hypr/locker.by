@@ -21,9 +21,17 @@ def main() {
         subprocess.check_output(["hyprctl", "dispatch", "workspace", str(99-i)])
         processes.append(subprocess.Popen(["alacritty", "-e", "/home/prushton/dotfiles/pipes.sh"]))
         if(i == 0) {
-            processes.append(subprocess.Popen(["alacritty", "-e", "/home/prushton/dotfiles/bigtime/src/bigtime", "-fSq"]))
+            time.sleep(0.1)
+            subprocess.check_output(["hyprctl", "dispatch", "workspace", "0"])
+            time.sleep(0.1)
+            subprocess.check_output(["hyprctl", "dispatch", "workspace", str(99-i)])
+            time.sleep(0.1)
+            processes.append(subprocess.Popen([
+                "alacritty", "-e", "python", "/home/prushton/dotfiles/batterm/dist/main.py"]))
+            time.sleep(0.2)
+            processes.append(subprocess.Popen([
+                "alacritty", "-e", "python", "/home/prushton/dotfiles/clockterm/dist/main.py"]))
         }
-        
         time.sleep(0.2)
     }
     
