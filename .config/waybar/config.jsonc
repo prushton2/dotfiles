@@ -36,7 +36,7 @@
 		"class<nm-connection-editor>": "",
 		"class<nwg-look>": "",
 
-		"class<.*Minecraft.*>": "󰍳",
+		"class<Minecraft.*>": "󰍳",
 
 		"class<.*Steam.*>": ""
 	}
