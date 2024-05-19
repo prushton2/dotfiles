@@ -5,9 +5,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": [ "custom/arch", "hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
+    "modules-left": [ "custom/arch", "hyprland/workspaces"],
     "modules-center": ["custom/manualclock"], // ["hyprland/window"],
-    "modules-right": ["pulseaudio#input", "pulseaudio#output", "network", "backlight", "temperature", "battery", "idle_inhibitor"],
+    "modules-right": ["pulseaudio#input", "pulseaudio#output", "network", "backlight", "temperature", "battery#hid", "battery", "systemd-failed-units", "idle_inhibitor"],
     // Modules configuration/
     "custom/arch": {
     	"format": "󰣇 ",
@@ -21,7 +21,7 @@
 	"window-rewrite-default": "",
 	"window-rewrite": {
 		"class<firefox>": "󰈹",
-		"class<firefox> title<.*discord.*>": "󰙯",
+		"class<firefox> title<.*Discord | .* - Mozilla Firefox>": "󰙯",
 		"class<firefox> title<.*youtube.*>": "󰗃",
 
 		"class<discord>": "󰙯",
@@ -38,7 +38,9 @@
 
 		"class<Minecraft.*>": "󰍳",
 
-		"class<.*Steam.*>": ""
+		"class<.*Steam.*>": "",
+
+		"class<PrismLauncher>": ""
 	}
     },
     "hyprland/mode": {
@@ -78,6 +80,21 @@
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% 󱐋",
         "format-plugged": "{capacity}%  ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["  ", "  ", "  ", "  ", "  "]
+    },    
+    "battery#hid": {
+	"bat": "hidpp_battery_0",
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+	"interval": 10,
+        "format": "{capacity}% 󰍽 ",
+        "format-charging": "{capacity}% 󱐋",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
@@ -139,5 +156,12 @@
 	"tooltip-format-activated": "Idle Inhibitor Active",
 	"tooltip-format-deactivated": "Idle Inhibitor Inactive",
 	"timeout": 180
+    },
+    "systemd-failed-units": {
+	"hide-on-ok": false, // Do not hide if there is zero failed units.
+	"format": "✗ {nr_failed}",
+	"format-ok": "✓",
+	"system": true, // Monitor failed systemwide units.
+	"user": true // Ignore failed user units.
     }
 }
