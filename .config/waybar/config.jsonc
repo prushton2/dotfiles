@@ -7,7 +7,7 @@
 	// Choose the order of the modules
 	"modules-left": [ "custom/arch", "hyprland/workspaces"],
 	"modules-center": ["custom/manualclock"], // ["hyprland/window"],
-	"modules-right": ["pulseaudio#input", "pulseaudio#output", "network", "bluetooth", "backlight", "temperature", "battery#hid", "battery", "systemd-failed-units", "idle_inhibitor"],
+	"modules-right": ["pulseaudio#input", "pulseaudio#output", "network", "bluetooth", "backlight", "temperature", "battery#hid", "battery", "systemd-failed-units", "custom/idle_inhibitor"],
 
 	// ----------------- LEFT MODULES -----------------
 	"custom/arch": {
@@ -95,15 +95,18 @@
 		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
 		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
 	},
-	"idle_inhibitor": {
+	"custom/idle_inhibitor": {
+    "interval": "once", 
+    "return-type": "json",
+    "exec": "~/.config/waybar/idle-swap.sh -r",
+    "signal": 1,
+    "exec-on-event": true,
+    "on-click": "~/.config/waybar/idle-swap.sh -s",
 		"format": "{icon}",
-		"format-icons": {
-			"deactivated": "󰍹 ", 
-			"activated": "󰷛 "
-		},
-		"tooltip-format-activated": "Idle Inhibitor Active",
-		"tooltip-format-deactivated": "Idle Inhibitor Inactive",
-		"timeout": 180
+		"format-icons": [ 
+			"󰷛 ",
+			"󰍹 " 
+    ],
 	},
 	"network": {
 		// "interface": "wlp2*", // (Optional) To force the use of this interface
