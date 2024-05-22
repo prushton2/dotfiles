@@ -100,7 +100,7 @@
     "return-type": "json",
     "exec": "~/.config/waybar/idle-swap.sh -r",
     "signal": 1,
-    "exec-on-event": true,
+    "exec-on-event": false,
     "on-click": "~/.config/waybar/idle-swap.sh -s",
 		"format": "{icon}",
 		"format-icons": [ 
