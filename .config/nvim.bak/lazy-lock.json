@@ -1,0 +1,4 @@
+{
+  "lazy.nvim": { "branch": "main", "commit": "8f19915175395680808de529e4220da8dafc0759" },
+  "moonfly": { "branch": "master", "commit": "522514d6325373c779ec38649059279693d5af9a" }
+}

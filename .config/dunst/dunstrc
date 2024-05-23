@@ -73,7 +73,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.). (X11 only)
-    transparency = 0
+    transparency = 50
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
@@ -170,6 +170,14 @@
     #   %%  Literal %
     # Markup is allowed
     format = "<span font_size='8pt'>%a</span>\n<span font_size='12pt'><b>%s</b></span>\n%p\n<span font_size='11pt'>%b</span>"
+#
+#<span font_size='8pt'>%a</span>\n
+#<span font_size='12pt'><b>%s</b></span>\n
+#[%n]%p\n
+#<span font_size='11pt'>%b</span>
+#
+
+
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -256,7 +264,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 0
+    corner_radius = 10
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -322,7 +330,7 @@
     background = "#101010"
     frame-color = "#202020"
     foreground = "#FFFFFF"
-    timeout = 5
+    timeout = 2
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
 

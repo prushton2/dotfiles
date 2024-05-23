@@ -74,7 +74,7 @@
 		"format-plugged": "{capacity}%  ",
 		"format-alt": "{time} {icon}",
 		"format-icons": ["  ", "  ", "  ", "  ", "  "]
-	},    
+	},
 	"battery#hid": {
 		"bat": "hidpp_battery_0",
 		"states": {
@@ -88,7 +88,7 @@
 		"format-icons": ["  ", "  ", "  ", "  ", "  "]
 	},
 	"bluetooth": {
-		"format": " {num_connections} ",
+		"format": "{num_connections}  ",
 		"format-disabled": "󰂲 ",
 		"format-off": "󰂲 ",
 		"tooltip-format": "{controller_alias}\t{controller_address}",
@@ -100,7 +100,7 @@
     "return-type": "json",
     "exec": "~/.config/waybar/idle-swap.sh -r",
     "signal": 1,
-    "exec-on-event": false,
+    "exec-on-event": true,
     "on-click": "~/.config/waybar/idle-swap.sh -s",
 		"format": "{icon}",
 		"format-icons": [ 
