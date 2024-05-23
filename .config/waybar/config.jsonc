@@ -7,7 +7,7 @@
 	// Choose the order of the modules
 	"modules-left": [ "custom/arch", "hyprland/workspaces"],
 	"modules-center": ["custom/manualclock"], // ["hyprland/window"],
-	"modules-right": ["pulseaudio#input", "pulseaudio#output", "network", "bluetooth", "backlight", "temperature", "battery#hid", "battery", "systemd-failed-units", "custom/idle_inhibitor"],
+	"modules-right": ["pulseaudio#input", "pulseaudio#output", "network", "bluetooth", "backlight", "temperature", "battery#hid", "battery", "custom/idle_inhibitor"],
 
 	// ----------------- LEFT MODULES -----------------
 	"custom/arch": {
