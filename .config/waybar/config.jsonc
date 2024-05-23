@@ -71,9 +71,9 @@
 		"interval": 10,
 		"format": "{capacity}% {icon}",
 		"format-charging": "{capacity}% 󱐋",
-		"format-plugged": "{capacity}%  ",
+		"format-plugged": "{capacity}% ",
 		"format-alt": "{time} {icon}",
-		"format-icons": ["  ", "  ", "  ", "  ", "  "]
+		"format-icons": [" ", " ", " ", " ", " "]
 	},
 	"battery#hid": {
 		"bat": "hidpp_battery_0",
@@ -82,15 +82,15 @@
 			"critical": 15
 		},
 		"interval": 10,
-		"format": "{capacity}% 󰍽 ",
+		"format": "{capacity}% 󰍽",
 		"format-charging": "{capacity}% 󱐋",
 		"format-alt": "{time} {icon}",
 		"format-icons": ["  ", "  ", "  ", "  ", "  "]
 	},
 	"bluetooth": {
-		"format": "{num_connections}  ",
-		"format-disabled": "󰂲 ",
-		"format-off": "󰂲 ",
+		"format": "{num_connections} ",
+		"format-disabled": "󰂲",
+		"format-off": "󰂲",
 		"tooltip-format": "{controller_alias}\t{controller_address}",
 		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
 		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
@@ -110,8 +110,8 @@
 	},
 	"network": {
 		// "interface": "wlp2*", // (Optional) To force the use of this interface
-		"format-wifi": "{signalStrength}%   ",
-		"format-ethernet": "{ipaddr}/{cidr} 󰈀 ",
+		"format-wifi": "{signalStrength}%  ",
+		"format-ethernet": "{ipaddr}/{cidr} 󰈀",
 		"tooltip-format": "{essid} @ {signaldBm}dB\n{ifname} via {gwaddr}",
 		"format-linked": "{ifname} (No IP) ",
 		"format-disconnected": "Disconnected ",
@@ -123,8 +123,8 @@
 
 		"format": "{format_source}",
 
-		"format-source": "{volume}%  ",
-		"format-source-muted": "{volume}%  ",
+		"format-source": "{volume}% ",
+		"format-source-muted": "{volume}% ",
 
 		"on-click-right": "pamixer --default-source -t",
 		"on-click": "pavucontrol -t 4"
@@ -136,11 +136,8 @@
 
 		"format": "{volume}% {icon}",
 		"format-muted": "{volume}%  ",
-
-		//"format-bluetooth": "{volume}% {icon} {format_source}",
-		//1"format-bluetooth-muted": " {icon} {format_source}",
-
-		"on-click-right": "pamixer -t",
+	
+    "on-click-right": "pamixer -t",
 
 		"format-icons": {
 			"headphone": " ",
@@ -157,8 +154,8 @@
 	"temperature": {
 		"thermal-zone": 2,
 		"hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
-		// "critical-threshold": 80,
-		// "format-critical": "{temperatureC}°C ",
+		"critical-threshold": 75,
+		"format-critical": "{temperatureC}°C ",
 		"format": "{temperatureC}°C  "
 	}
 }

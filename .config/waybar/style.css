@@ -24,6 +24,15 @@ window#waybar {
 	padding-right: 10px;
 }
 
+.module {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+#temperature.critical {
+  color: red;
+}
+
 #workspace button {
 	border-bottom: 3px solid rgba(10,10,10,0.5);
 	border-radius: 3px;
