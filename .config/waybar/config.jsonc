@@ -82,7 +82,7 @@
 			"critical": 15
 		},
 		"interval": 10,
-		"format": "{capacity}% 󰍽",
+		"format": "{capacity}% 󰍽 ",
 		"format-charging": "{capacity}% 󱐋",
 		"format-alt": "{time} {icon}",
 		"format-icons": ["  ", "  ", "  ", "  ", "  "]
@@ -123,8 +123,8 @@
 
 		"format": "{format_source}",
 
-		"format-source": "{volume}% ",
-		"format-source-muted": "{volume}% ",
+		"format-source": "{volume}%  ",
+		"format-source-muted": "{volume}%  ",
 
 		"on-click-right": "pamixer --default-source -t",
 		"on-click": "pavucontrol -t 4"
