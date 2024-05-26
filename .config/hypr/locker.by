@@ -53,7 +53,9 @@ def main() {
   time.sleep(1)
 
   subprocess.run(["dunstctl", "set-paused", "false"])
-  subprocess.Popen(["waybar"])
+  subprocess.Popen(["waybar"], stdout=subprocess.PIPE)
+
+  #time.sleep(60)
 
 }
 

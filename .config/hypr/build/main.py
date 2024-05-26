@@ -27,7 +27,7 @@ def main ():
             [subprocess .Popen ("alacritty -e /bin/python /home/prushton/dotfiles/clockterm/dist/main.py",shell =True ),0]
             )
             processes .append (
-            [subprocess .Popen ("alacritty -e /bin/python /home/prushton/dotfiles/batterm/dist/main.py",shell =True ),0]
+            [subprocess .Popen ("alacritty --hold -e /bin/python /home/prushton/dotfiles/batterm/dist/main.py",shell =True ),0]
             )
             
         
@@ -37,28 +37,33 @@ def main ():
     
     time .sleep (0.2)
     for process in processes :
-        print (process [0].pid ,"is moving to workspace",99-process [1])
         subprocess .call ("hyprctl dispatch movetoworkspacesilent "+str (99-process [1])+",pid:"+str (process [0].pid ),shell =True )
         
     
     
-    # subprocess.run(["dunstctl", "set-paused", "true"])
-    # subprocess.run(["killall", "waybar"])
-    # 
-    # subprocess.run(["hyprlock"])
-    # 
-    # subprocess.run(["dunstctl", "set-paused", "false"])
-    # subprocess.Popen(["waybar"])
+    subprocess .run (["dunstctl","set-paused","true"])
+    subprocess .run (["killall","waybar"])
     
-    #for i in processes {
-    #print(i.pid)
-    #i.kill()
-    #}
+    subprocess .run (["hyprlock"])
     
-    # for i in range(monitors) {
-    #     subprocess.check_output(["hyprctl", "dispatch", "focusmonitor", str(i)])
-    #     subprocess.check_output(["hyprctl", "dispatch", "workspace", str(i+1)])
-    # }
+    for process in processes :
+        process [0].kill ()
+        
+    
+    
+    for i in range (monitors ):
+        subprocess .check_output (["hyprctl","dispatch","focusmonitor",str (i )])
+        subprocess .check_output (["hyprctl","dispatch","workspace",str (i +1)])
+        
+    
+    
+    time .sleep (1)
+    
+    subprocess .run (["dunstctl","set-paused","false"])
+    subprocess .Popen (["waybar"],stdout =subprocess .PIPE )
+    
+    time .sleep (60)
+    
     
 
 
