@@ -40,9 +40,6 @@ def main() {
   subprocess.run(["killall", "waybar"])
   
   subprocess.run(["hyprlock"])
-  
-  subprocess.run(["dunstctl", "set-paused", "false"])
-  subprocess.Popen(["waybar"])
     
   for process in processes {
     process[0].kill()
@@ -52,6 +49,12 @@ def main() {
     subprocess.check_output(["hyprctl", "dispatch", "focusmonitor", str(i)])
     subprocess.check_output(["hyprctl", "dispatch", "workspace", str(i+1)])
   }
+  
+  time.sleep(1)
+
+  subprocess.run(["dunstctl", "set-paused", "false"])
+  subprocess.Popen(["waybar"])
+
 }
 
 if __name__ == "__main__" {
