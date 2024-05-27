@@ -37,7 +37,7 @@ def main() {
   }
 
   subprocess.run(["dunstctl", "set-paused", "true"])
-  subprocess.run(["killall", "waybar"])
+  #subprocess.run(["killall", "waybar"])
   
   subprocess.run(["hyprlock"])
     
@@ -50,10 +50,12 @@ def main() {
     subprocess.check_output(["hyprctl", "dispatch", "workspace", str(i+1)])
   }
   
+  #subprocess.run(["systemctl", "start", "--user", "hypridle"])
+
   time.sleep(1)
 
   subprocess.run(["dunstctl", "set-paused", "false"])
-  subprocess.Popen(["waybar"], stdout=subprocess.PIPE)
+  #subprocess.Popen(["waybar"], stdout=subprocess.PIPE)
 
   #time.sleep(60)
 
