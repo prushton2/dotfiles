@@ -111,10 +111,10 @@
 	"network": {
 		// "interface": "wlp2*", // (Optional) To force the use of this interface
 		"format-wifi": "{signalStrength}%  ",
-		"format-ethernet": "{ipaddr}/{cidr} 󰈀",
+		"format-ethernet": "{ipaddr}/{cidr} 󰈀 ",
 		"tooltip-format": "{essid} @ {signaldBm}dB\n{ifname} via {gwaddr}",
-		"format-linked": "{ifname} (No IP) ",
-		"format-disconnected": "Disconnected ",
+		"format-linked": "{ifname} (No IP)  ",
+		"format-disconnected": "Disconnected  ",
 		"on-click": "alacritty -e nmtui"
 	},
 	"pulseaudio#input": {
@@ -127,7 +127,7 @@
 		"format-source-muted": "{volume}%  ",
 
 		"on-click-right": "pamixer --default-source -t",
-		"on-click": "pavucontrol -t 4"
+		"on-click": "flatpak run org.saivert.pwvucontrol"
 	},
 
 	"pulseaudio#output": {
@@ -148,7 +148,7 @@
 			"car": " ",
 			"default": [" ", " ", " "]
 		},
-		"on-click": "pavucontrol -t 3"
+		"on-click": "flatpak run com.saivert.pwvucontrol"
 	},
 
 	"temperature": {
@@ -156,6 +156,7 @@
 		"hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
 		"critical-threshold": 75,
 		"format-critical": "{temperatureC}°C ",
-		"format": "{temperatureC}°C  "
+		"format": "{temperatureC}°C  ",
+    "tooltip-format": "testing" 
 	}
 }
