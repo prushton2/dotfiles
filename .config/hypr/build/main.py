@@ -17,6 +17,7 @@ def main ():
     
     out =subprocess .check_output (["hyprctl","monitors"])
     monitors =len (str (out ).split ("Monitor"))-1
+    subprocess .check_output (["hyprctl","dispatch","workspace",str (100)])
     for i in range (monitors ):
         time .sleep (0.2)
         processes .append (
@@ -31,18 +32,25 @@ def main ():
             )
             
         
+        
+    
+    time .sleep (2)
+    for i in range (monitors ):
         subprocess .check_output (["hyprctl","dispatch","focusmonitor",str (i )])
         subprocess .check_output (["hyprctl","dispatch","workspace",str (99-i )])
         
     
-    time .sleep (0.2)
+    time .sleep (2)
     for process in processes :
+        subprocess .check_output (["hyprctl","dispatch","movecursortocorner","1"])
+        time .sleep (1)
         subprocess .call ("hyprctl dispatch movetoworkspacesilent "+str (99-process [1])+",pid:"+str (process [0].pid ),shell =True )
+        time .sleep (1)
         
     
     
     subprocess .run (["dunstctl","set-paused","true"])
-    subprocess .run (["killall","waybar"])
+    #subprocess.run(["killall", "waybar"])
     
     subprocess .run (["hyprlock"])
     
@@ -57,12 +65,14 @@ def main ():
         
     
     
+    #subprocess.run(["systemctl", "start", "--user", "hypridle"])
+    
     time .sleep (1)
     
     subprocess .run (["dunstctl","set-paused","false"])
-    subprocess .Popen (["waybar"],stdout =subprocess .PIPE )
+    #subprocess.Popen(["waybar"], stdout=subprocess.PIPE)
     
-    time .sleep (60)
+    #time.sleep(60)
     
     
 
