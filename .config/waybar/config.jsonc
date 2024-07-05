@@ -42,7 +42,9 @@
 
 			"class<.*Steam.*>": "",
 
-			"class<PrismLauncher>": ""
+			"class<PrismLauncher>": "",
+
+      "class<Gimp-.*>": ""
 		}
 	},
 	"hyprland/mode": {
