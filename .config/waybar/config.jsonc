@@ -5,9 +5,9 @@
 	// "width": 1280, // Waybar width
 	"spacing": 4, // Gaps between modules (4px)
 	// Choose the order of the modules
-	"modules-left": [ "custom/arch", "hyprland/workspaces"],
+	"modules-left": [ "custom/arch", "hyprland/workspaces#left"],
 	"modules-center": ["custom/manualclock"], // ["hyprland/window"],
-	"modules-right": ["pulseaudio#input", "pulseaudio#output", "network", "bluetooth", "backlight", "temperature", "battery#hid", "battery", "custom/idle_inhibitor"],
+	"modules-right": ["hyprland/workspaces#const", "pulseaudio#input", "pulseaudio#output", "network", "bluetooth", "backlight", "temperature", "battery#hid", "battery", "custom/idle_inhibitor"],
 
 	// ----------------- LEFT MODULES -----------------
 	"custom/arch": {
@@ -15,9 +15,10 @@
 		"on-click": "alacritty --hold -e neofetch"
 	},
 
-	"hyprland/workspaces": {
+	"hyprland/workspaces#left": {
 		"format": "{icon}: {windows} ",
 		"all-outputs": true,
+		"ignore-workspaces": ["24"],
 
 		"format-window-separator": "  ",
 		"window-rewrite-default": "",
@@ -36,6 +37,7 @@
 			"class<obsidian>": "",
 			"class<nm-connection-editor>": "",
 			"class<nwg-look>": "",
+			"class<org.keepassxc.KeePassXC>": "",
 
 			"class<Minecraft.*>": "󰍳",
 
@@ -43,7 +45,7 @@
 
 			"class<PrismLauncher>": "",
 
-      "class<Gimp-.*>": ""
+			"class<Gimp-.*>": ""
 		}
 	},
 	"hyprland/mode": {
@@ -97,17 +99,28 @@
 		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
 	},
 	"custom/idle_inhibitor": {
-    "interval": "once", 
-    "return-type": "json",
-    "exec": "~/.config/waybar/idle-swap.sh -r",
-    "signal": 1,
-    "exec-on-event": true,
-    "on-click": "~/.config/waybar/idle-swap.sh -s",
+	    "interval": "once", 
+	    "return-type": "json",
+	    "exec": "~/.config/waybar/idle-swap.sh -r",
+	    "signal": 1,
+	    "exec-on-event": true,
+	    "on-click": "~/.config/waybar/idle-swap.sh -s",
 		"format": "{icon}",
 		"format-icons": [ 
 			"󰷛 ",
 			"󰍹 " 
-    ],
+		]
+	},
+	"hyprland/workspaces#const": {
+		"format": "{windows}",
+		"all-outputs": true,
+		"ignore-workspaces": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+
+		"format-window-separator": "  ",
+		"window-rewrite-default": "",
+		"window-rewrite": {
+			"class<org.keepassxc.KeePassXC>": ""
+		}
 	},
 	"network": {
 		// "interface": "wlp2*", // (Optional) To force the use of this interface
