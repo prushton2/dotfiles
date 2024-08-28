@@ -1,5 +1,5 @@
 configuration {
-	modes: "window,drun,run,ssh,filebrowser,windowcd,combi,keys";
+/*	modes: "window,drun,run,ssh";*/
 /*	font: "mono 12";*/
 /*	location: 0;*/
 /*	yoffset: 0;*/
@@ -149,4 +149,6 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "/usr/share/rofi/themes/DarkBlue.rasi"
+//@theme "current"
+//@theme "/usr/share/rofi/themes/DarkBlue.rasi"
+@theme "/usr/share/rofi/themes/Adapta-Nokto.rasi"
