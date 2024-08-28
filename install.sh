@@ -9,6 +9,7 @@ __config_files=(
 	".config/nvim" 
 	".config/kitty" 
 	".config/waybar" 
+	".config/rofi"
 	".bashrc" 
 	".gnupg"
 )
