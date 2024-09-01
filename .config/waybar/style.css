@@ -46,6 +46,10 @@ window#waybar {
 	border-bottom: 3px solid aqua;
 }
 
+#workspaces button.focused {
+	border-bottom: 3px solid aqua;
+}
+
 #custom-arch {
 	color: aqua;
 }
